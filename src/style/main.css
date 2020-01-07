@@ -1,0 +1,256 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+.full-width {
+    display: flex;
+    justify-content:center;
+}
+
+.docs-entry-content {
+    width:100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.react-copy {
+    max-width: 550px;
+    align-self: center;
+    margin: 0 8px 1rem 8px;
+}
+
+.app-container,
+.img-container {
+    max-width: 700px;
+}
+
+.img-container {
+    padding: 3rem 0 0 0;
+}
+
+/* *********************************** *
+PLACEHOLDERS BEFORE DATA IS LOADED
+* *********************************** */
+.load_filler_container {
+    width:100%;
+    max-width: 700px;
+}
+
+.load_filler {
+    width:100%;
+    height: 45px;
+}
+
+.load_filler:nth-child(odd) {
+    background-color: gainsboro;
+}
+
+.load_filler:nth-child(even) {
+}
+
+img {
+    height:100%;
+    width:100%;
+}
+
+/* *********************************** *
+TABLE
+* *********************************** */
+.table-container {
+    width:100%;
+    margin: 0 0 4rem 0;
+}
+
+.table-info {
+    font-size: 0.9rem;
+    text-align: center;
+    font-variant: small-caps;
+    margin: 0;
+}
+
+.table {
+    width:100%;
+    max-width: 700px;
+    border-collapse: collapse;
+    font-family: 'Roboto',sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.table .header-row,
+.table .table-row {
+    height: 60px;
+}
+
+.table th {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table td {
+    border-bottom: 1pt black solid;
+}
+
+.table th {
+    border-bottom: 2pt black solid;
+}
+
+.table th,
+.table td {
+    padding: 0 0 0 0.5rem;
+}
+
+/* .table tbody tr:nth-child(odd) {
+    background-color: #F5F5F5;
+} */
+
+.table td.last_move {
+    font-size: 0.75rem;
+}
+
+.table td.url a,
+.table td.last_move {
+    color: #696969;
+}
+
+.table th:first-of-type {
+    width:5%;
+    pointer-events: none;
+}
+
+.table th:nth-of-type(2) {
+    width:5%
+}
+
+.table th:nth-of-type(3) {
+    width:35%;
+    pointer-events: none;
+}
+
+.table th:nth-of-type(5) {
+    width:35%
+}
+
+.table-row-expansion {
+    padding: 1rem 0;
+}
+
+.table-row-expansion td {
+    vertical-align: top;
+}
+
+.table-row-expansion .summary-text {
+    margin: 0.8rem 0 1.25rem 0;
+    line-height: 1.3rem;
+    padding-right: 3rem;
+}
+
+.table-row-expansion .summary-author {
+    font-weight: 700;
+}
+
+.table-row:hover {
+    background-color: #F5F5F5;
+}
+
+/* *********************************** *
+TABLE MOBILE
+* *********************************** */
+@media (max-width:600px) {
+    .table {
+        font-size: 0.80rem;
+    }
+
+    .item-status {
+        display: none;
+    }
+
+    .table-row-expansion .summary-text {
+        padding-right: 0;
+    }
+
+    .table th:nth-of-type(5) {
+        width:25%
+    }
+}
+
+
+/* *********************************** *
+STATUS CELL STYLING
+* *********************************** */
+.icon {
+    display: inline-flex;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    width: 31px;
+    justify-content: center;
+    align-items: baseline;
+    border-radius: 3px;
+    margin: 0 0.5rem 0 0;
+}
+
+.icon-fail {
+    background: #FFB6C1;
+}
+
+.fa-times path { /* FAIL */
+    fill: #DC143C;
+}
+
+.icon-pass {
+    background: #98FB98;
+}
+
+.fa-check path { /* PASS */
+    fill: green;
+}
+
+.icon-waiting {
+    background-color: #FFD700
+}
+
+.fa-exclamation-triangle path { /* WAITING */
+    fill: #FF8C00
+}
+
+.vote-line {
+    margin: 0.5rem 0 0.5rem 0;
+    line-height: 1.5rem;
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.vote-line:first-of-type {
+    margin: 0.8rem 0 0.5rem 0;
+}
+
+.badge {
+    border: 1pt solid black;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin: 0 0 0 0.5rem;
+    padding: 0.1rem 0.5rem;
+
+}
+
+@media (max-width:600px) {
+    .vote-line {
+        flex-direction: column;
+        margin: 0 0.5rem 0 0;
+    }
+
+    .vote-line:first-of-type {
+        margin: 0.8rem 0.5rem 0.5rem 0;
+    }
+
+    .badge {
+        margin: 0.5rem 0 0 0;
+        font-size: 0.7rem;
+    }
+}
+
+.table td p a {
+    text-decoration: underline;
+    font-weight: 700;
+    color: #00b0b9;
+}
